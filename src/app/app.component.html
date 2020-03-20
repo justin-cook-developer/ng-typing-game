@@ -5,7 +5,10 @@
       <p>
         <span
           *ngFor="let character of randomText.split(''); let i = index"
-          [class]="compare(character, text[i])"
+          [ngClass]="{
+            'has-text-success': text[i] && character === text[i],
+            'has-text-danger': text[i] && character !== text[i]
+          }"
           >{{ character }}</span
         >
       </p>

@@ -30,12 +30,4 @@ export class AppComponent {
       this.text === this.randomText
     );
   }
-
-  public compare(randomTextChar: string, enteredChar: string): string {
-    return enteredChar
-      ? randomTextChar === enteredChar
-        ? "has-text-success"
-        : "has-text-danger"
-      : "";
-  }
 }
